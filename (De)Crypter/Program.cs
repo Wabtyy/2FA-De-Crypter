@@ -1,4 +1,4 @@
-﻿using System.Text;
+using System.Text;
 Random rnd = new Random();
 while (true)
 {
@@ -26,33 +26,18 @@ while (true)
     }
 
     string abc = "";
-    List<int> indices = new List<int> { 0, 1, 2, 3 }; // Hier einfach eine feste Auswahl, um den Code zu reproduzieren
-
+    List<int> indices = new List<int> { 0, 1, 2, 3 }; 
     foreach (int index in indices)
     {
-        abc += StringToNumber((a[index] * random).ToString());
+        abc += ((a[index] * random) % 26 + 'a').ToString();
     }
 
-    string output = GetFirstFourDigits(abc);
+    string output = abc.Substring(0, 4);
     Console.WriteLine(output + " | " + random);
     Thread.Sleep(5000);
     Console.Clear();
 }
 
-
-
-static string GetFirstFourDigits(string input)
-{
-    return input.Length >= 4 ? input.Substring(0, 4) : input;
-}
-static string StringToNumber(string input)
-{
-    if (char.IsLetter(input[0]))
-    {
-        return ((input.ToLower()[0] - 'a') % 10).ToString();
-    }
-    return input;
-}
 static string FilterAlphanumeric(string input)
 {
     StringBuilder result = new StringBuilder();
