@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "(De)Crypter/1.0.0": {
+        "runtime": {
+          "(De)Crypter.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "(De)Crypter/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
